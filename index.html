@@ -13,18 +13,44 @@
     <h1>Weather Dashboard</h1>
     <container class="current-weather">
         <form>
-            <h3>Search for a City</h3>
+            <h2>Search for a City</h2>
             <label for="city"></label><br>
-            <input type="text" id="city" name="city"><br><br>
+            <input type="text" id="city-search" name="city-search"><br><br>
             <input type="submit" value="Search" id="submit"><br><br>
         </form>
-        <div class="cities">
+        <aside class="cities">
             <input type="submit" value="Austin" id="submit"><br><br>
             <input type="submit" value="Chicago" id="submit"><br><br>
             <input type="submit" value="New York" id="submit"><br><br>
             <input type="submit" value="Orlando" id="submit"><br><br>
-            <input type="submit" value="Search" id="submit"><br><br>
-        </div>
+            <input type="submit" value="San Francisco" id="submit"><br><br>
+            <input type="submit" value="Seattle" id="submit"><br><br>
+            <input type="submit" value="Denver" id="submit"><br><br>
+            <input type="submit" value="Atlanta" id="submit"><br><br> 
+        </aside>
+        <section class="current" style="border:black; border-style:solid; background-color: bisque;">
+            <h2 id="city"></h2>
+            <p id="date"></p>
+            <p id="conditions"></p>
+            <p id="temp"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+            <p id="uv"></p>
+        </section>
+        <section class="forecast" >
+            <h3 style="text-align:center;">5-Day Forecast</h3>
+            <div class="firstday-card" width="200" height="300" style="background-color:rgb(26, 26, 39); color: white"></div>
+                <p id="date-dayOne"></p>
+                <p id="descr-dayOne"></p>
+                <p id="temp-dayOne"></p>
+                <p id="humid-dayOne"></p>
+                <p id="wind-dayOne"></p>
+                <p id="uvi-dayOne"></p>
+            <div class="secondday-card"></div>
+            <div class="thirdday-card"></div>
+            <div class="fourthday-card"></div>
+            <div class="fifthday-card"></div>
+        </section>
 
     <script src="./script.js"></script>  
 </body>
