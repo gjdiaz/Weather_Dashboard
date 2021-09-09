@@ -1,0 +1,50 @@
+*  {
+
+}
+
+header  {
+    background-image: linear-gradient(to right, rgb(18, 51, 194) , rgb(23, 13, 53));
+    padding-top: 3pt;
+    padding-bottom: 3pt;
+}
+h1 {
+
+}
+.search  {
+    width: 25%;
+    height: 150px;
+    margin: 2pt;
+}
+
+.cities {
+    width: 25%;
+    height: 400px;
+    margin: 2pt;
+}
+
+.current {
+    width: 75%;
+    height: 200px;
+    margin: 2pt;
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    height: 200px;
+    margin: 2pt;
+
+}
+
+.card  {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(45, 45, 77);
+    color: white;
+    border: black;
+    border-style: solid;
+    width: 20%;
+    height: 65%;
+    margin: 2pt;
+}

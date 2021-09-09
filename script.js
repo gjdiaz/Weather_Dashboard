@@ -1,6 +1,5 @@
-// borrowed from activity 9 Demo Dynamic
-// reference https://w3collective.com/fetch-display-api-data-javascript/
-// var weatherContainer = document.getElementById('weather');
+var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=32.715&lon=-117.1625&appid=b07cfedc5a378ff86010f8868a197741&units=imperial';
+
 var cityEl = document.getElementById('city');
 var dateEl = document.getElementById('date');
 var conditionsEl = document.getElementById('conditions');
@@ -19,8 +18,6 @@ var uviDayOne = document.getElementById('uvi-dayOne')
 var fetchButton = document.getElementById('submit')
 
 function getApi() {
-    var requestUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=32.715&lon=-117.1625&appid=b07cfedc5a378ff86010f8868a197741';
-
     fetch(requestUrl)
         .then(function (response) {
         return response.json();
@@ -34,15 +31,14 @@ function getApi() {
         humidEl.innerHTML = data.current.humidity;
         windEl.innerHTML = data.current.wind_speed;
         uvEl.innerHTML = data.current.uvi;
-        
+
+        // create for loop for days 1-5
         dateDayOne.innerHTML = data.daily[0].dt;
         descrDayOne.innerHTML = data.daily[0].weather[0].description;
         tempDayOne.innerHTML = data.daily[0].temp.day;
         humidDayOne.innerHTML = data.daily[0].humidity;
         windDayOne.innerHTML = data.daily[0].weather.wind_speed;
         uviDayOne.innerHTML = data.daily[0].uvi;
-
-
         }); 
 
 }
@@ -50,3 +46,6 @@ function getApi() {
     e.preventDefault();
     getApi();
 });
+
+// convert date using moment.js
+moment().format('MMMM Do YYYY, h:mm:ss a')

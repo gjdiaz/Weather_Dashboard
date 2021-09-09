@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
-    <src>
-
-    </src>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Weather Dashboard</h1>
+    <header>
+    <h1 style="text-align:center; color:white;">Weather Dashboard</h1>
+    </header>
     <container class="current-weather">
-        <form>
+        <form class="search" style="border:black; border-style:solid;">
             <h2>Search for a City</h2>
-            <label for="city"></label><br>
-            <input type="text" id="city-search" name="city-search"><br><br>
+            <label for="city"></label>
+            <input type="text" class="form-input" placeholder="Enter city name" name="city-search"><br><br>
             <input type="submit" value="Search" id="submit"><br><br>
         </form>
-        <aside class="cities">
+        <aside class="cities" style="border:black; border-style:solid;">
             <input type="submit" value="Austin" id="submit"><br><br>
             <input type="submit" value="Chicago" id="submit"><br><br>
             <input type="submit" value="New York" id="submit"><br><br>
@@ -37,19 +37,20 @@
             <p id="wind"></p>
             <p id="uv"></p>
         </section>
-        <section class="forecast" >
+        <section class="forecast" style="border:black; border-style:solid;">
             <h3 style="text-align:center;">5-Day Forecast</h3>
-            <div class="firstday-card" width="200" height="300" style="background-color:rgb(26, 26, 39); color: white"></div>
-                <p id="date-dayOne"></p>
-                <p id="descr-dayOne"></p>
-                <p id="temp-dayOne"></p>
-                <p id="humid-dayOne"></p>
-                <p id="wind-dayOne"></p>
-                <p id="uvi-dayOne"></p>
-            <div class="secondday-card"></div>
-            <div class="thirdday-card"></div>
-            <div class="fourthday-card"></div>
-            <div class="fifthday-card"></div>
+                <div class="card">   
+                    <p id="date-dayOne"></p>
+                    <p id="descr-dayOne"></p>
+                    <p id="temp-dayOne"></p>
+                    <p id="humid-dayOne"></p>
+                    <p id="wind-dayOne"></p>
+                    <p id="uvi-dayOne"></p>
+                </div> 
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
         </section>
 
     <script src="./script.js"></script>  
